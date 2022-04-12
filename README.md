@@ -8,3 +8,10 @@ Algorithm: <br />
 2. Create a recursive function that takes a grid. <br />
 3. Check for any unassigned location. If present then assign a number from 1 to 9, check if assigning the number to current index makes the grid unsafe or not, if safe then recursively call the function for all safe cases from 0 to 9. if any recursive call returns true, end the loop and return true. If no recursive call returns true then return false. <br />
 4. If there is no unassigned location then return true. <br />
+
+# Complexity Analysis:  
+
+Time complexity: O(9^(n*n)).  <br />
+For every unassigned index, there are 9 possible options so the time complexity is O(9^(n*n)). The time complexity remains the same but there will be some early pruning so the time taken will be much less than the naive algorithm but the upper bound time complexity remains the same.  <br />
+Space Complexity: O(n*n).  <br />
+To store the output array a matrix is needed.
